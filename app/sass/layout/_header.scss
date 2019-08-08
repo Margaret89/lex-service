@@ -1,1 +1,88 @@
 /*-------------- Header -----------------*/
+.header-top{
+	padding: 10px 0 12px;
+	border-bottom: 1px solid #e4e4e4;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__link a{
+		@include font(normal, normal, 13px, 1.25, $color-grey);
+		text-transform: uppercase;
+		letter-spacing: 0.6px;
+		border-bottom: 0;
+	}
+
+	&__link a:not(:last-child){
+		margin-right: 38px;
+	}
+}
+
+.header-bottom{
+	padding: 18px 0 15px;
+	border-bottom: 1px solid #e4e4e4;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo a{
+		border-bottom: 0;
+	}
+
+	&__slogan{
+		@include font(normal, normal, 16px, 1, $color-grey);
+		margin-left: 15px;
+		margin-right: 15px;
+		max-width: 215px;
+	}
+
+	&__feedback{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	&__phone,
+	&__phone a{
+		@include font(normal, 500, 20px, 1.2, $color-text);
+		letter-spacing: 1px;
+		border-bottom: 0;
+	}
+
+	&__phone a:hover{
+		color: $color-brown-light;
+	}
+
+	&__feedback-link{
+		font-size: 17px;
+		line-height: 20px;
+	}
+
+	&__ic-basket{
+		@include font(normal, normal, 16px, 1.2, $color-text);
+		border-bottom: 0;
+		margin-left: 15px;
+	}
+
+	&__ic-basket::before{
+		content: '';
+		display: inline-block;
+		width: 18px;
+		height: 20px;
+		background: url(#{$path-icons}/ic-cart.svg) no-repeat center;
+		margin-right: 12px;
+	}
+
+	&__ic-basket:hover{
+		color: color-brown-light;
+	}
+
+	&__ic-basket:hover::before{
+		background-image: url(#{$path-icons}/ic-cart-hover.svg);
+	}
+}

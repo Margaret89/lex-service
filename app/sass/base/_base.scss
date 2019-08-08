@@ -1,7 +1,7 @@
 ﻿html,
 body{
 	background: #fff;
-	font-family: $font-futura;
+	font-family: $font-futura-book;
 	@include font(normal, normal, 16px, 1.75, $color-text);
 	box-sizing:border-box;
 }
@@ -103,6 +103,7 @@ input[type="submit"].btn{
 .btn:hover,
 input[type="submit"].btn:hover{
 	background: $color-brown-light;
+	color: #fff;
 }
 
 .btn--border,

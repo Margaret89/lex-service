@@ -1,1 +1,77 @@
 /*-------------- Footer -----------------*/
+.footer{
+	padding: 60px 0;
+
+	&__info{
+		max-width: 160px;
+	}
+
+	&__logo{
+		margin-top: 8px;
+	}
+
+	&__logo a{
+		border-bottom: 0;
+	}
+
+	&__slogan{
+		@include font(normal, normal, 17px, 1.25, $color-grey);
+		margin-top: 25px;
+	}
+
+	&__copyright{
+		@include font(normal, normal, 17px, 1.25, $color-text);
+		margin-top: 30px;
+	}
+
+	&__year{
+		font-size: 15px;
+	}
+
+	&__head{
+		@include font(normal, 500, 23px, 1.25, $color-text);
+		margin-bottom: 25px;
+	}
+
+	.social{
+		margin-top: 22px;
+	}
+
+	.social__item{
+		width: 20px;
+		height: 18px;
+	}
+}
+
+.footer-menu{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&__item,
+	&__item a{
+		@include font(normal, normal, 19px, 1.25, $color-text);
+		border-bottom: 0;
+	}
+
+	&__item a:hover{
+		color: $color-brown-light;
+	}
+
+	&__item:not(:last-child){
+		margin-bottom: 15px;
+	}
+}
+
+.footer-contacts{
+	@include font(normal, normal, 19px, 1.25, $color-text);
+
+	&__item{
+		margin-bottom: 15px;
+	}
+
+	&__label{
+		font-size: 17px;
+		color: $color-grey;
+	}
+}

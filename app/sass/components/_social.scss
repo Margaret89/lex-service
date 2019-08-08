@@ -1,0 +1,31 @@
+/*-------------- Social -----------------*/
+.social{
+	display: flex;
+	align-items: center;
+
+	&__item{
+		display: inline-block;
+		width: 16px;
+		height: 14px;
+		border-bottom: 0;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 20px;
+	}
+
+	&__item--youtube{background: url(#{$path-icons}/ic-youtube.svg) no-repeat center;}
+	&__item--vk{background: url(#{$path-icons}/ic-vk.svg) no-repeat center;}
+	&__item--telegram{background: url(#{$path-icons}/ic-telegram.svg) no-repeat center;}
+	&__item--in{background: url(#{$path-icons}/ic-in.svg) no-repeat center;}
+
+	&__item--youtube:hover{background: url(#{$path-icons}/ic-youtube-hover.svg) no-repeat center;}
+	&__item--vk:hover{background: url(#{$path-icons}/ic-vk-hover.svg) no-repeat center;}
+	&__item--telegram:hover{background: url(#{$path-icons}/ic-telegram-hover.svg) no-repeat center;}
+	&__item--in:hover{background: url(#{$path-icons}/ic-in-hover.svg) no-repeat center;}
+
+	&__item,
+	&__item:hover{
+		background-size: contain;
+	}
+}

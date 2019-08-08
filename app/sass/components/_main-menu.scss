@@ -1,0 +1,25 @@
+/*-------------- main-menu -----------------*/
+.main-menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 16px 0 20px;
+	list-style: none;
+
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item,
+	&__item a{
+		@include font(normal, normal, 19px, 1.25, $color-text);
+		border-bottom: 0;
+	}
+
+	&__item a:hover{
+		color: $color-brown-light;
+	}
+}
