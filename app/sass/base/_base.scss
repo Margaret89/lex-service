@@ -1,8 +1,8 @@
 ﻿html,
 body{
 	background: #fff;
-	font-family: $font-helvetica;
-	@include font(normal, normal, 13px, 20px, $color-text);
+	font-family: $font-futura;
+	@include font(normal, normal, 16px, 1.75, $color-text);
 	box-sizing:border-box;
 }
 
@@ -17,60 +17,56 @@ img{
 }
 
 a{
-	color: $color-text;
+	color: $color-brown;
+	text-decoration: none;
+	border-bottom: 1px dashed $color-brown;
 }
 
 a:hover,
 a:active,
 a:focus{
-	text-decoration: none;
+	color: $color-brown-light;
+	border-bottom: 0;
 }
 
 p{
-	@include font(normal, normal, 13px, 20px, $color-text);
+	@include font(normal, normal, 16px, 1.75, $color-text);
 	padding: 5px 0;
 }
 
 h1,
 .h1{
-	font-family: $font-helvetica;
-	@include font(normal, normal, 19px, 24px, $color-text);
+	@include font(normal, 500, 40px, 1.25, $color-text);
 	margin-bottom: 40px;
 }
 
 h2,
 .h2{
-	font-family: $font-helvetica;
-	@include font(normal, normal, 16px, 21px, $color-text);
+	@include font(normal, 500, 32px, 1.25, $color-text);
 	margin-bottom: 20px;
 }
 
 h3,
 .h3{
-	font-family: $font-helvetica;
-	@include font(normal, normal, 14px, 20px, $color-text);
-	text-transform: uppercase;
+	@include font(normal, 500, 28px, 1.25, $color-text);
 	margin-bottom: 10px;
 }
 
 h4,
 .h4{
-	font-family: $font-helvetica;
-	@include font(normal, normal, 14px, 20px, $color-text);
+	@include font(normal, 500, 25px, 1.25, $color-text);
 	margin-bottom: 10px;
 }
 
 h5,
 .h5{
-	font-family: $font-helvetica;
-	@include font(normal, normal, 13px, 18px, $color-text);
+	@include font(normal, 500, 20px, 1.25, $color-text);
 	margin-bottom: 0;
 }
 
 h6,
 .h6{
-	font-family: $font-helvetica;
-	@include font(normal, normal, 12px, 15px, $color-text);
+	@include font(normal, 500, 16px, 1.25, $color-text);
 	margin-bottom: 0;
 }
 
@@ -91,34 +87,37 @@ main{
 .btn,
 input[type="submit"].btn{
 	display: inline-block;
-	height: 38px;
-	background: $color-text;
-	border: 1px solid $color-text;
-	font-family: $font-helvetica;
-	@include font(normal, 500, 12px, 36px, #fff);
-	text-transform: uppercase;
-	padding: 0 20px;
+	height: 50px;
+	background: $color-brown;
+	border: 0;
+	outline: 0;
+	border-radius: 25px;
+	@include font(normal, 500, 14px, 48px, #fff);
+	padding: 0 40px;
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
-	min-width: 200px;
+	// min-width: 220px;
 }
 
 .btn:hover,
 input[type="submit"].btn:hover{
-	background: transparent;
-	color: $color-text;
+	background: $color-brown-light;
 }
 
 .btn--border,
 input[type="submit"].btn--border{
+	height: 45px;
+	padding: 0 35px;
 	background: transparent;
-	color: $color-text;
+	border: 1px solid $color-brown;
+	border-radius: 22.5px;
+	color: $color-brown;
 }
 
 .btn--border:hover,
 input[type="submit"].btn--border:hover{
-	background: $color-text;
+	background: $color-brown;
 	color: #fff;
 }
 
