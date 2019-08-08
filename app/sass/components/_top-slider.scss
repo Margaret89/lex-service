@@ -1,0 +1,28 @@
+/*-------------- top-slider -----------------*/
+.top-slider{
+	&__item{
+		height: 740px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__content{
+		text-align: center;
+		max-width: 530px;
+	}
+
+	&__head{
+		@include font(normal, 600, 47px, 1, #fff);
+		letter-spacing: 1.8px;
+	}
+
+	&__text{
+		@include font(normal, 500, 21px, 1.25, #fff);
+		margin-top: 30px;
+	}
+
+	.btn{
+		margin-top: 40px;
+	}
+}

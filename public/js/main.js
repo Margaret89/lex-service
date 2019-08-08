@@ -1,4 +1,11 @@
 $(document).ready(function () {
+	// Верхний слайдер
+	$('.js-top-slider').slick({
+		infinite: true,
+		arrows: false,
+		dots: true,
+	});
+		
 
 	
 	// //---------- Маска для телефона -------------
