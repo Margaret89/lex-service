@@ -1,7 +1,7 @@
 ﻿html,
 body{
 	background: #fff;
-	font-family: $font-futura-book;
+	font-family: $font-futura;
 	@include font(normal, normal, 16px, 1.75, $color-text);
 	box-sizing:border-box;
 }
