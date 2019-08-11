@@ -3314,7 +3314,8 @@ a.bredcrumb__item:hover {
   font-size: 19px;
   line-height: 1.25;
   color: #222;
-  padding: 31px 30px 34px 0;
+  letter-spacing: 0.3px;
+  padding: 31px 60px 34px 0;
   position: relative;
   cursor: pointer;
 }
