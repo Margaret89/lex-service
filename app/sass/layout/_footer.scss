@@ -61,6 +61,10 @@
 	&__item:not(:last-child){
 		margin-bottom: 15px;
 	}
+
+	&__item::after{
+		display: none;
+	}
 }
 
 .footer-contacts{

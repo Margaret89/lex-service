@@ -2,6 +2,8 @@
 .top-slider{
 	margin-bottom: 95px;
 	position: relative;
+	height: 740px;
+	overflow: hidden;
 	
 	&__item{
 		height: 740px;
@@ -52,6 +54,10 @@
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+	}
+
+	.slick-dots li::after{
+		display: none;
 	}
 
 	.slick-dots button{

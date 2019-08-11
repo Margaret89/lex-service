@@ -28,4 +28,23 @@
 		@include font(normal, 700, 19px, 1.2, $color-text);
 		margin-top: 25px;
 	}
+
+	&--hor &__item{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 100%;
+		text-align: left;
+		margin-bottom: 50px;
+	}
+
+	&--hor &__text{
+		width: calc(100% - 110px);
+		margin: 0;
+	}
+}
+
+h2 + .advant,
+.h2 + .advant{
+	margin-top: 40px;
 }

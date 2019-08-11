@@ -26,11 +26,16 @@
 }
 
 .team-slider{
+	display: none;
 	position: relative;
 	width: calc(100% - 300px);
 	
 	.slick-list{
 		padding: 30px 0 30px 30px;
+	}
+
+	&.slick-initialized{
+		display: block;
 	}
 
 	&__item{

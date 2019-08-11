@@ -122,6 +122,19 @@ $(document).ready(function () {
 		});
 	});
 
+	// Плавный переход к ссылке
+	if ($('.js-link-move').length) {
+		$('body').on('click','.js-link-move', function (event) {
+			event.preventDefault();
+			var id  = $(this).attr('href'),
+				top = $(id).offset().top;
+			$('body,html').animate({scrollTop: top}, 1000);
+
+			// Проверка наличия анимации
+			productAnim(1);
+		});
+	}
+
 	// Маска для телефона
 	$.mask.definitions['~'] = "[+-]";
 	$(".js-phone").mask("+7 (999) 999-9999");

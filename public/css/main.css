@@ -111,17 +111,17 @@ h2,
 .h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 38px;
   line-height: 1.2;
   color: #222;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 h3,
 .h3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1.25;
   color: #222;
   margin-bottom: 10px;
@@ -155,6 +155,59 @@ h6,
   line-height: 1.25;
   color: #222;
   margin-bottom: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul,
+ul li {
+  list-style: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+ul li::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E6B775;
+  position: absolute;
+  top: 15px;
+  left: -20px;
+}
+
+ul ul {
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+ul ul li::after {
+  display: none;
+}
+
+ul ul li::before {
+  content: '\2013';
+  margin-right: 3px;
+}
+
+ul ul ul {
+  padding-left: 30px;
 }
 
 .wrapper {
@@ -215,6 +268,7 @@ input[type="submit"].btn--border {
   border: 1px solid #d6aa6d;
   border-radius: 22.5px;
   color: #d6aa6d;
+  line-height: 43px;
 }
 
 .btn--border:hover,
@@ -518,6 +572,10 @@ video {
   margin-bottom: 15px;
 }
 
+.footer-menu__item::after {
+  display: none;
+}
+
 .footer-contacts {
   font-style: normal;
   font-weight: normal;
@@ -696,10 +754,16 @@ video {
   color: #E6B775;
 }
 
+.main-menu__item::after {
+  display: none;
+}
+
 /*-------------- top-slider -----------------*/
 .top-slider {
   margin-bottom: 95px;
   position: relative;
+  height: 740px;
+  overflow: hidden;
 }
 
 .top-slider__item {
@@ -771,6 +835,10 @@ video {
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+
+.top-slider .slick-dots li::after {
+  display: none;
 }
 
 .top-slider .slick-dots button {
@@ -849,8 +917,10 @@ video {
   display: block;
   width: 100%;
   height: 2px;
+  border-radius: 0;
   background: #d6aa6d;
   position: absolute;
+  top: auto;
   bottom: -20px;
   left: 0;
   right: 0;
@@ -859,6 +929,10 @@ video {
 
 .tabs-page__item.active {
   color: #222;
+}
+
+.tabs-page__item::after {
+  display: none;
 }
 
 .tabs-page__content-item {
@@ -937,6 +1011,10 @@ video {
 
 .tabs-page-vert__item.active::before {
   background: #d6aa6d;
+}
+
+.tabs-page-vert__item::after {
+  display: none;
 }
 
 .tabs-page-vert__content-item {
@@ -1667,6 +1745,31 @@ h1 + .tabs-page,
   margin-top: 25px;
 }
 
+.advant--hor .advant__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.advant--hor .advant__text {
+  width: calc(100% - 110px);
+  margin: 0;
+}
+
+h2 + .advant,
+.h2 + .advant {
+  margin-top: 40px;
+}
+
 /*-------------- our-team -----------------*/
 .our-team-wrap {
   padding: 70px 0;
@@ -1707,12 +1810,17 @@ h1 + .tabs-page,
 }
 
 .team-slider {
+  display: none;
   position: relative;
   width: calc(100% - 300px);
 }
 
 .team-slider .slick-list {
   padding: 30px 0 30px 30px;
+}
+
+.team-slider.slick-initialized {
+  display: block;
 }
 
 .team-slider__item {
@@ -2158,6 +2266,265 @@ a.bredcrumb__item:hover {
   letter-spacing: 0.3px;
   text-align: center;
   margin-top: -30px;
+}
+
+.catalog-nav {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 52px;
+}
+
+.catalog-nav__list, .catalog-nav__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.catalog-nav__item {
+  padding: 0px 0 18px;
+}
+
+.catalog-nav__item,
+.catalog-nav__item a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #222;
+  border-bottom: 0;
+}
+
+.catalog-nav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.catalog-nav__item::after {
+  display: none;
+}
+
+.catalog-detail {
+  margin-bottom: 85px;
+}
+
+.catalog-detail h1,
+.catalog-detail .h1 {
+  max-width: 700px;
+}
+
+.catalog-detail__content {
+  max-width: 920px;
+}
+
+.catalog-detail__desc {
+  margin-bottom: 40px;
+}
+
+.catalog-detail__services {
+  margin-bottom: 52px;
+}
+
+.catalog-detail__services-add {
+  margin-bottom: 52px;
+}
+
+.catalog-detail__time {
+  margin-bottom: 45px;
+}
+
+.catalog-detail__docs {
+  margin-bottom: 52px;
+}
+
+.cat-services {
+  margin-top: 34px;
+}
+
+.cat-services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 23px;
+  margin-bottom: 26px;
+}
+
+.cat-services__img {
+  width: 90px;
+}
+
+.cat-services .btn {
+  width: 140px;
+}
+
+.cat-services__price {
+  width: 270px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #222;
+  padding-left: 95px;
+}
+
+.cat-services__text {
+  width: calc(100% - 500px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+.docs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.docs-list__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33.33%;
+  min-height: 115px;
+  padding: 17px 25px 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #222;
+  border: 1px solid #e4e4e4;
+  margin: -1px 0 0 -1px;
+}
+
+.catalog-detail-cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f7f7f7;
+  padding: 50px;
+  margin-top: 18px;
+}
+
+.catalog-detail-cost__head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1;
+  color: #222;
+  width: calc(100% - 430px);
+  padding-right: 30px;
+}
+
+.catalog-detail-cost .btn {
+  width: 200px;
+}
+
+.catalog-detail-cost__price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.25;
+  color: #222;
+  width: 230px;
+  padding-right: 30px;
+}
+
+.catalog-detail-info {
+  background: #f7f7f7;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+
+.catalog-detail-info__item {
+  padding: 20px 30px 18px;
+}
+
+.catalog-detail-info__item:not(:last-child) {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.catalog-detail-info__head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #222;
+  margin-bottom: 13px;
+}
+
+.catalog-detail-info__text,
+.catalog-detail-info__text p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #222;
+}
+
+.catalog-detail-info__text p {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.catalog-detail-info__text p:last-child {
+  margin-bottom: 0;
+}
+
+.catalog-detail-info__old-price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #a2a2a2;
+  text-decoration: line-through;
+  margin-top: 3px;
+  margin-bottom: 12px;
+}
+
+.catalog-detail-info__price {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1;
+  color: #222;
+}
+
+.catalog-detail-info .btn {
+  margin-top: 25px;
+  width: 100%;
+  min-width: 100px;
 }
 
 /*-------------- category -----------------*/

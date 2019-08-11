@@ -45,15 +45,13 @@ h1,
 
 h2,
 .h2{
-	@include font(normal, 700, 32px, 1.2, $color-text);
-	// @include font(normal, 700, 32px, 1.2, $color-text);
-	// letter-spacing: 0.5px;
-	margin-bottom: 20px;
+	@include font(normal, 700, 38px, 1.2, $color-text);
+	margin-bottom: 23px;
 }
 
 h3,
 .h3{
-	@include font(normal, 500, 28px, 1.25, $color-text);
+	@include font(normal, 500, 32px, 1.25, $color-text);
 	margin-bottom: 10px;
 }
 
@@ -73,6 +71,55 @@ h6,
 .h6{
 	@include font(normal, 500, 16px, 1.25, $color-text);
 	margin-bottom: 0;
+}
+
+ul{
+	padding-left: 20px;
+}
+
+ul,
+ul li{
+	list-style: none;
+	@include font(normal, normal, 19px, 1.5, $color-text);
+}
+
+ul li{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+ul li::after{
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: $color-brown-light;
+	position: absolute;
+	top: 15px;
+	left: -20px;
+}
+
+ul ul{
+	padding-left: 0;
+	margin-top: 10px;
+}
+
+ul ul li{
+	margin-bottom: 10px;
+}
+
+ul ul li::after{
+	display: none;
+}
+
+ul ul li::before{
+	content: '\2013';
+	margin-right: 3px;
+}
+
+ul ul ul{
+	padding-left: 30px;
 }
 
 .wrapper{
@@ -124,6 +171,7 @@ input[type="submit"].btn--border{
 	border: 1px solid $color-brown;
 	border-radius: 22.5px;
 	color: $color-brown;
+	line-height: 43px;
 }
 
 .btn--border:hover,
