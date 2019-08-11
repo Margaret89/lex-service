@@ -307,6 +307,10 @@ video {
   display: none;
 }
 
+.fancybox-content {
+  padding: 30px 40px 40px;
+}
+
 /*-------------- Header -----------------*/
 .header-top {
   padding: 10px 0 12px;
@@ -1122,6 +1126,10 @@ h1 + .tabs-page,
   background: url(../img/icon/ic-call.svg) no-repeat 0 center;
 }
 
+.form-site input[data-icon="email"] {
+  background: url(../img/icon/ic-mail.svg) no-repeat 0 center;
+}
+
 .form-site__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1142,6 +1150,72 @@ h1 + .tabs-page,
 .form-site input[type="email"]:focus,
 .form-site textarea:focus {
   border-color: #d6aa6d;
+}
+
+.form-site--vert {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-site--vert .form-site__head {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #222;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+.form-site--vert .form-site__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.25;
+  color: #222;
+  letter-spacing: 0.3px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.form-site--vert .form-site__content {
+  display: block;
+}
+
+.form-site--vert .btn {
+  width: 100%;
+  min-width: 100px;
+}
+
+.form-site--vert input[type="text"],
+.form-site--vert input[type="email"],
+.form-site--vert textarea {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form-site--vert .btn {
+  margin-top: 20px;
+}
+
+.popup-form {
+  width: 360px;
+}
+
+.success-alert {
+  max-width: 360px;
+}
+
+.success-alert__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 1.25;
+  color: #222;
+  text-align: center;
 }
 
 /*-------------- steps -----------------*/

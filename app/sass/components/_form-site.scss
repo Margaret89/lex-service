@@ -57,13 +57,9 @@
 		color: $color-grey;
 	}
 
-	input[data-icon="person"]{
-		background: url(#{$path-icons}/ic-person.svg) no-repeat 0 center;
-	}
-
-	input[data-icon="phone"]{
-		background: url(#{$path-icons}/ic-call.svg) no-repeat 0 center;
-	}
+	input[data-icon="person"]{background: url(#{$path-icons}/ic-person.svg) no-repeat 0 center;}
+	input[data-icon="phone"]{background: url(#{$path-icons}/ic-call.svg) no-repeat 0 center;}
+	input[data-icon="email"]{background: url(#{$path-icons}/ic-mail.svg) no-repeat 0 center;}
 
 	&__content{
 		display: flex;
@@ -79,5 +75,59 @@
 	input[type="email"]:focus,
 	textarea:focus{
 		border-color: $color-brown;
+	}
+
+	&--vert{
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+
+	&--vert &__head{
+		@include font(normal, 700, 22px, 1.2, $color-text);
+		text-align: center;
+		letter-spacing: 0.2px;
+		margin-bottom: 10px;
+	}
+
+	&--vert &__text{
+		@include font(normal, normal, 17px, 1.25, $color-text);
+		letter-spacing: 0.3px;
+		text-align: center;
+		margin-bottom: 15px;
+		margin-top: 0;
+	}
+
+	&--vert &__content{
+		display: block;
+	}
+
+	&--vert .btn{
+		width: 100%;
+		min-width: 100px;
+	}
+
+	&--vert input[type="text"],
+	&--vert input[type="email"],
+	&--vert textarea{
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	&--vert .btn{
+		margin-top: 20px;
+	}
+}
+
+.popup-form{
+	width: 360px;
+}
+
+.success-alert{
+	max-width: 360px;
+
+	&__text{
+		@include font(normal, normal, 19px, 1.25, $color-text);
+		text-align: center;
 	}
 }

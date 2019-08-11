@@ -10,6 +10,7 @@ $(document).ready(function () {
 		});
 	}
 
+	// Слайдер команды
 	if ($('.js-team-slider').length) {
 		$('.js-team-slider').slick({
 			arrows: true,
@@ -104,6 +105,22 @@ $(document).ready(function () {
 			sliceText();
 		});
 	}
+
+	// Вывод сообщения об успешной отправке в попапе
+	$('.js-valid-form').each(function(){
+		$(this).on('submit',function(e){
+			$.fancybox.close();
+			$.fancybox.open({
+				src  : '#msg-success',
+				type : 'inline',
+				opts : {
+					
+				}
+			});
+			$(this)[0].reset();
+			e.preventDefault();
+		});
+	});
 
 	// Маска для телефона
 	$.mask.definitions['~'] = "[+-]";

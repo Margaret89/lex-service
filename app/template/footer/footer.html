@@ -75,3 +75,25 @@
 		</div>
 	</div>
 </footer>
+
+<!-- Форма обратной связи -->
+<div style="display: none;" id="feedback-form" class="popup-form">
+	<form method="get" class="form-site form-site--vert js-valid-form">
+		<div class="form-site__head">Оставьте заявку</div>
+
+		<div class="form-site__text">И наши менеджеры свяжутся<br>с&nbsp;Вами в&nbsp;течении 15&nbsp;минут</div>
+
+		<div class="form-site__content">
+			<input type="text" placeholder="Ваше имя" data-icon="person" required="required">
+			<input type="text" placeholder="Ваш телефон" data-icon="phone" class="js-phone" required="required">
+			<input type="email" placeholder="Ваш e-mail" data-icon="email">
+
+			<input type="submit" value="Оформить заказ" class="btn">
+		</div>
+	</form>
+</div>
+
+<!-- Попап об успешной отправки письма -->
+<div style="display: none;" id="msg-success" class="success-alert">
+	<div class="success-alert__text">Ваше сообщение успешно отправлено!</div>
+</div>
