@@ -240,6 +240,28 @@ video{
 	}
 }
 
+.link-back{
+	@include font(normal, normal, 19px, 1.25, $color-brown);
+	border-bottom: 0;
+	padding-left: 30px;
+	position: relative;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 12px;
+		background: url(#{$path-icons}/ic-arr-back.svg) no-repeat center;
+		position: absolute;
+		@include top-center;
+		left: 0;
+	}
+
+	&:hover::before{
+		background-image: url(#{$path-icons}/ic-arr-back-active.svg)
+	}
+}
+
 .fancybox-content{
 	padding: 30px 40px 40px;
 }

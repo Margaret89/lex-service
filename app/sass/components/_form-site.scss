@@ -22,6 +22,11 @@
 		padding-bottom: 95px;
 		border-bottom: 1px solid #dadada;
 	}
+
+	&--no-indent .container{
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
 	
 	&__head{
 		@include font(normal, 700, 32px, 1.2, $color-text);
@@ -49,7 +54,7 @@
 	}
 
 	textarea{
-		height: 100px;
+		height: 120px;
 	}
 
 	input[type="text"]::placeholder,
@@ -61,11 +66,16 @@
 	input[data-icon="person"]{background: url(#{$path-icons}/ic-person.svg) no-repeat 0 center;}
 	input[data-icon="phone"]{background: url(#{$path-icons}/ic-call.svg) no-repeat 0 center;}
 	input[data-icon="email"]{background: url(#{$path-icons}/ic-mail.svg) no-repeat 0 center;}
+	textarea[data-icon="phone"]{background: url(#{$path-icons}/ic-call.svg) no-repeat 0 15px;}
 
 	&__content{
 		display: flex;
 		justify-content: space-between;
 		flex: 1;
+	}
+
+	&__content--end{
+		align-items: flex-end;
 	}
 
 	.btn{
@@ -117,6 +127,23 @@
 
 	&--vert .btn{
 		margin-top: 20px;
+	}
+
+	&__group{
+		width: 100%;
+		margin-right: 50px;
+	}
+
+	&__group input[type="text"],
+	&__group input[type="email"],
+	&__group textarea{
+		margin-right: 0;
+	}
+
+	&__group input[type="text"]:not(:last-child),
+	&__group input[type="email"]:not(:last-child),
+	&__group textarea:not(:last-child){
+		margin-bottom: 20px;
 	}
 }
 

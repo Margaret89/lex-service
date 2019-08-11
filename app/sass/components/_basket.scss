@@ -7,6 +7,12 @@
 	&__content{
 		max-width: 920px;
 	}
+
+	&__head{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
 .basket-list{
