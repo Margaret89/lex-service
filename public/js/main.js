@@ -135,6 +135,18 @@ $(document).ready(function () {
 		});
 	}
 
+	// Раскрывающийся блок
+	$(".js-unwrap-block").on('click','.js-unwrap-head',function(event){
+		event.preventDefault();
+		$(this).parent().toggleClass("opened");
+		if($(this).parent().hasClass("opened")){
+			$(this).parent().children(".js-unwrap-content").slideDown(400);
+		}
+		else{
+			$(this).parent().children(".js-unwrap-content").slideUp(400);
+		}
+	});
+
 	// Маска для телефона
 	$.mask.definitions['~'] = "[+-]";
 	$(".js-phone").mask("+7 (999) 999-9999");

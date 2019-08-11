@@ -1,0 +1,68 @@
+/*-------------- unwrap-block -----------------*/
+.unwrap-block{
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	margin-top: -1px;
+
+	&:first-child{
+		margin-top: 0;
+	}
+
+	&__head{
+		@include font(normal, 700, 19px, 1.25, $color-text);
+		letter-spacing: 0.3px;
+		padding: 31px 60px 34px 0;
+		position:relative;
+		cursor:pointer;
+	}
+
+	&__head:hover{
+		color: $color-brown-light;
+	}
+
+	&__head:after{
+		content:'';
+		display:block;
+		width: 14px;
+		height: 14px;
+		background: url(#{$path-icons}/ic-arr-down.svg) no-repeat 0 0;
+		position:absolute;
+		@include top-center;
+		right: 0;
+	}
+
+	&__head:hover:after{background-position-image: url(#{$path-icons}/ic-arr-down-hover.svg);}
+	&.opened &__head:after{background-position-image: url(#{$path-icons}/ic-arr-up.svg);}
+	&.opened &__head:hover:after{background-position-image: url(#{$path-icons}/ic-arr-up-hover.svg);}
+
+	&__content{
+		display: none;
+		padding-bottom: 30px;
+	}
+
+	// &__content,
+	// &__content p,
+	// &__content li{
+	// 	@include font(normal, normal, 15px, 1.75, $color-grey);
+	// }
+
+	// &__title{
+	// 	@include font(normal, normal, 17px, 1.15, $color-text);
+	// 	margin-bottom: 10px;
+	// }
+
+	// ul li,
+	// ol li {
+	// 	margin-bottom: 7px;
+	// }
+
+	// ul + &__title,
+	// ol + &__title{
+	// 	margin-top: 15px;
+	// }
+
+	// .btn{
+	// 	margin-top: 10px;
+	// 	min-width: 220px;
+	// }
+}
