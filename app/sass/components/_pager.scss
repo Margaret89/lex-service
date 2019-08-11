@@ -1,0 +1,32 @@
+﻿/*----------- pager -------------*/
+.pager{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 5px 0;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		@include font(normal, normal, 19px, 1, $color-text);
+		text-align: center;
+		text-decoration: none;
+		border-bottom: 0;
+		background: transparent;
+	}
+
+	&__item:hover,
+	&__item.active{
+		background: $color-brown;
+		color: #fff;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 10px;
+	}
+}
