@@ -31,9 +31,9 @@
 		right: 0;
 	}
 
-	&__head:hover:after{background-position-image: url(#{$path-icons}/ic-arr-down-hover.svg);}
-	&.opened &__head:after{background-position-image: url(#{$path-icons}/ic-arr-up.svg);}
-	&.opened &__head:hover:after{background-position-image: url(#{$path-icons}/ic-arr-up-hover.svg);}
+	&__head:hover:after{background-image: url(#{$path-icons}/ic-arr-down-hover.svg);}
+	&.opened &__head:after{background-image: url(#{$path-icons}/ic-arr-up.svg);}
+	&.opened &__head:hover:after{background-image: url(#{$path-icons}/ic-arr-up-hover.svg);}
 
 	&__content{
 		display: none;

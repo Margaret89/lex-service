@@ -3339,15 +3339,15 @@ a.bredcrumb__item:hover {
 }
 
 .unwrap-block__head:hover:after {
-  background-position-image: url(../img/icon/ic-arr-down-hover.svg);
+  background-image: url(../img/icon/ic-arr-down-hover.svg);
 }
 
 .unwrap-block.opened .unwrap-block__head:after {
-  background-position-image: url(../img/icon/ic-arr-up.svg);
+  background-image: url(../img/icon/ic-arr-up.svg);
 }
 
 .unwrap-block.opened .unwrap-block__head:hover:after {
-  background-position-image: url(../img/icon/ic-arr-up-hover.svg);
+  background-image: url(../img/icon/ic-arr-up-hover.svg);
 }
 
 .unwrap-block__content {
