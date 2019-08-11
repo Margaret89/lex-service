@@ -1,6 +1,6 @@
 /*-------------- our-team -----------------*/
 .our-team-wrap{
-	padding: 100px 0;
+	padding: 70px 0;
 	margin-bottom: 75px;
 }
 
@@ -10,8 +10,8 @@
 
 	&__info{
 		width: 300px;
-		padding-bottom: 135px;
-		padding-top: 45px;
+		padding-bottom: 145px;
+		padding-top: 75px;
 	}
 
 	&__head{
@@ -83,7 +83,7 @@
 		box-shadow: none;
 		font-size: 0;
 		position: absolute;
-		bottom: 60px;
+		bottom: 90px;
 		cursor: pointer;
 		background: transparent;
 		padding: 0;
@@ -101,8 +101,8 @@
 		margin: 0 auto;
 	}
 
-	.slick-next{left: -263px;}
-	.slick-prev{left: -330px;}
+	.slick-next{left: -233px;}
+	.slick-prev{left: -300px;}
 
 	.slick-next::after{background: url(#{$path-icons}/ic-arr-next.svg) no-repeat center;}
 	.slick-prev::after{background: url(#{$path-icons}/ic-arr-prev.svg) no-repeat center;}
