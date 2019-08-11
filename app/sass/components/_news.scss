@@ -146,6 +146,144 @@
 	}
 }
 
+.news-detail{
+	&__img{
+		width: 100%;
+		height: 540px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		margin-bottom: 48px;
+	}
+
+	&__copyright{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 24px 30px;
+		@include font(normal, 700, 22px, 1.25, #fff);
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 19.27%, rgba(0, 0, 0, 0.8) 100%);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__date{
+		font-size: 15px;
+	}
+
+	&__share{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 35px 0;
+	}
+
+	&__text{
+		border-bottom: 1px solid #e4e4e4;
+		padding-bottom: 45px;
+		margin-bottom: 60px;
+	}
+}
+
+.news-detail-author{
+	display: flex;
+	align-items: center;
+
+	&__img{
+		display: inline-block;
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-right: 25px;
+	}
+
+	&__author{
+		@include font(normal, normal, 19px, 1.25, $color-grey);
+	}
+}
+
+.sidebar-news{
+	padding: 15px 0 0 30px;
+
+	&__head{
+		@include font(normal, 700, 28px, 1.2, $color-text);
+		letter-spacing: 0.5px;
+		margin-bottom: 35px;
+	}
+
+	.form-site{
+		padding: 34px 40px;
+		background: #f7f7f7;
+	}
+
+	.form-site--vert .form-site__head{
+		font-size: 28px;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 12px;
+	}
+
+	.form-site--vert .form-site__text{
+		font-size: 19px;
+		text-align: left;
+	}
+
+	.form-site--vert input[type="text"],
+	.form-site--vert input[type="email"],
+	.form-site--vert textarea{
+		margin-bottom: 8px;
+	}
+}
+
+.news-more{
+	margin-bottom: 65px;
+
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__content{
+		width: calc(100% - 90px);
+	}
+
+	&__author{
+		@include font(normal, normal, 17px, 1.25, $color-grey);
+	}
+
+	&__name,
+	&__name a{
+		@include font(normal, bold, 19px, 1.25, $color-text);
+		border-bottom: 0;
+		margin-top: 7px;
+	}
+
+	&__name a:hover{
+		color: $color-brown-light;
+	}
+}
+
 h1 +.news,
 .h1 +.news{
 	margin-top: 55px;

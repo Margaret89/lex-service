@@ -1,0 +1,38 @@
+/*-------------- share -----------------*/
+.share{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&__title{
+		@include font(normal, normal, 19px, 1.25, $color-text);
+		letter-spacing: 0.5px;
+		margin-right: 17px;
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+		display: inline-block;
+		width: 80px;
+		height: 40px;
+		border-radius: 20px;
+		border-bottom: 0;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 15px;
+	}
+
+	&__item--vk{background: #5181B8 url(#{$path-icons}/ic-share-vk.svg) no-repeat center;}
+	&__item--fb{background: #31619E url(#{$path-icons}/ic-share-fb.svg) no-repeat center;}
+	&__item--tw{background: #3FA6DA url(#{$path-icons}/ic-share-tw.svg) no-repeat center;}
+
+	&__item--vk:hover{background-color: #4873A4;}
+	&__item--fb:hover{background-color: #295185;}
+	&__item--tw:hover{background-color: #3C9AC9;}
+}

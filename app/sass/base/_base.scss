@@ -122,6 +122,15 @@ ul ul ul{
 	padding-left: 30px;
 }
 
+.list-line li{
+	margin-bottom: 20px;
+}
+
+.list-line li::after{
+	width: 10px;
+	height: 2px;
+}
+
 .wrapper{
 	display: flex;
 	flex-direction: column;
