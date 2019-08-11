@@ -1,10 +1,18 @@
 /*-------------- top-slider -----------------*/
 .top-slider{
+	margin-bottom: 95px;
+	
 	&__item{
 		height: 740px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+	}
+
+	&.slick-initialized .slick-slide{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__content{
@@ -13,16 +21,62 @@
 	}
 
 	&__head{
-		@include font(normal, 600, 47px, 1, #fff);
-		letter-spacing: 1.8px;
+		@include font(normal, 700, 47px, 1, #fff);
+		letter-spacing: 0.8px;
 	}
 
 	&__text{
 		@include font(normal, 500, 21px, 1.25, #fff);
+		letter-spacing: 0.4px;
 		margin-top: 30px;
 	}
 
 	.btn{
 		margin-top: 40px;
+	}
+
+	.slick-dots,
+	.slick-dots li{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.slick-dots{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: 45px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.slick-dots button{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border: 0;
+		outline: 0;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.75);
+		box-shadow: none;
+		font-size: 0;
+		margin: 0 12.5px;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	.slick-dots button:hover{
+		background: #fff;
+	}
+
+	.slick-dots .slick-active button{
+		width: 20px;
+		height: 20px;
+		border: 2px solid #fff;
+		background: transparent;
+		cursor: auto;
 	}
 }

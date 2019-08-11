@@ -1,0 +1,44 @@
+/*-------------- head-block -----------------*/
+.head-block{
+	margin-top: -10px;
+
+	&__title,
+	&__subtitle{
+		@include font(normal, 700, 47px, 1, $color-text);
+		letter-spacing: 1px;
+	}
+
+	&__subtitle{
+		margin-bottom: 50px;
+	}
+
+	&__content{
+		padding-left: 70px;
+		position: relative;
+	}
+
+	&__content::before,
+	&__content::after{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 32px;
+		background: #e4e4e4;
+	}
+
+	&__content::before{
+		width: 35px;
+		height: 1px;
+	}
+
+	&__content::after{
+		width: 1px;
+		height: calc(100% - 32px);
+	}
+
+	.link-more{
+		display: inline-block;
+		margin-top: 35px;
+	}
+}

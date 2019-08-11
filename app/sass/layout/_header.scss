@@ -19,6 +19,10 @@
 	&__link a:not(:last-child){
 		margin-right: 38px;
 	}
+
+	&__link a:hover{
+		color: $color-text;
+	}
 }
 
 .header-bottom{
@@ -49,7 +53,7 @@
 
 	&__phone,
 	&__phone a{
-		@include font(normal, 500, 20px, 1.2, $color-text);
+		@include font(normal, 600, 20px, 1.2, $color-text);
 		letter-spacing: 1px;
 		border-bottom: 0;
 	}

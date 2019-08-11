@@ -1,0 +1,126 @@
+/*-------------- steps -----------------*/
+@keyframes inner-circle-one{
+	0% { opacity: 0; }
+	12% { opacity: 0.75; }
+	100% { opacity: 0.75; }
+}
+
+@keyframes out-circle-one{
+	0% { opacity: 0; }
+	12% { opacity: 0; }
+	25% { opacity: 0.25; }
+	100% { opacity: 0.25; }
+}
+
+@keyframes inner-circle-two{
+	0% { opacity: 0; }
+	25% { opacity: 0; }
+	37% { opacity: 0.75; }
+	100% { opacity: 0.75; }
+}
+
+@keyframes out-circle-two{
+	0% { opacity: 0; }
+	37% { opacity: 0; }
+	50% { opacity: 0.25; }
+	100% { opacity: 0.25; }
+}
+
+@keyframes inner-circle-three{
+	0% { opacity: 0; }
+	50% { opacity: 0; }
+	62% { opacity: 0.75; }
+	100% { opacity: 0.75; }
+}
+
+@keyframes out-circle-three{
+	0% { opacity: 0; }
+	62% { opacity: 0; }
+	75% { opacity: 0.25; }
+	100% { opacity: 0.25; }
+}
+
+@keyframes inner-circle-four{
+	0% { opacity: 0; }
+	75% { opacity: 0; }
+	87% { opacity: 0.75; }
+	100% { opacity: 0.75; }
+}
+
+@keyframes out-circle-four{
+	0% { opacity: 0; }
+	87% { opacity: 0; }
+	100% { opacity: 0.25; }
+}
+
+.steps{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+	margin-bottom: 95px;
+
+	&__item{
+		text-align: center;
+	}
+
+	&__num{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: $color-brown;
+		@include font(normal, 700, 19px, 64px, #fff);
+		position: relative;
+		margin: 30px;
+	}
+
+	&__num::before,
+	&__num::after{
+		content: '';
+		display: inline-block;
+		border: 1px solid $color-brown;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		opacity: 0;
+	}
+
+	&__num::before{
+		width: 90px;
+		height: 90px;
+	}
+
+	&__num::after{
+		width: 120px;
+		height: 120px;
+	}
+
+	&__text{
+		@include font(normal, normal, 19px, 1.25, $color-text);
+		max-width: 300px;
+		padding: 0 20px;
+		margin-top: 25px;
+	}
+
+	&.animate &__num--one::before{animation: inner-circle-one 4s ease 0.5s infinite;}
+	&.animate &__num--one::after{animation: out-circle-one 4s ease 0.5s infinite;}
+	&.animate &__num--two::before{animation: inner-circle-two 4s ease 0.5s infinite;}
+	&.animate &__num--two::after{animation: out-circle-two 4s ease 0.5s infinite;}
+	&.animate &__num--three::before{animation: inner-circle-three 4s ease 0.5s infinite;}
+	&.animate &__num--three::after{animation: out-circle-three 4s ease 0.5s infinite;}
+	&.animate &__num--four::before{animation: inner-circle-four 4s ease 0.5s infinite;}
+	&.animate &__num--four::after{animation: out-circle-four 4s ease 0.5s infinite;}
+
+	&.animate &__num--one::before,
+	&.animate &__num--one::after,
+	&.animate &__num--two::before,
+	&.animate &__num--two::after,
+	&.animate &__num--three::before,
+	&.animate &__num--three::after,
+	&.animate &__num--four::before,
+	&.animate &__num--four::after{
+		animation-fill-mode: forwards
+	}
+}

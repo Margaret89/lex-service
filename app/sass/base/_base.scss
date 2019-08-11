@@ -30,19 +30,24 @@ a:focus{
 }
 
 p{
-	@include font(normal, normal, 16px, 1.75, $color-text);
+	@include font(normal, normal, 19px, 1.5, $color-text);
+	letter-spacing: 0.3px;
 	padding: 5px 0;
+	margin-bottom: 12px;
 }
 
 h1,
 .h1{
-	@include font(normal, 500, 40px, 1.25, $color-text);
+	@include font(normal, 700, 47px, 1.1, $color-text);
+	letter-spacing: 0.3px;
 	margin-bottom: 40px;
 }
 
 h2,
 .h2{
-	@include font(normal, 500, 32px, 1.25, $color-text);
+	@include font(normal, 700, 32px, 1.2, $color-text);
+	// @include font(normal, 700, 32px, 1.2, $color-text);
+	// letter-spacing: 0.5px;
 	margin-bottom: 20px;
 }
 
@@ -81,7 +86,7 @@ h6,
 
 main{
 	flex: 1;
-	padding-bottom: 100px;
+	// padding-bottom: 100px;
 }
 
 .btn,
@@ -93,11 +98,16 @@ input[type="submit"].btn{
 	outline: 0;
 	border-radius: 25px;
 	@include font(normal, 500, 18px, 48px, #fff);
+	letter-spacing: 0.2px;
 	padding: 0 40px;
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
 	// min-width: 220px;
+}
+
+input[type="submit"].btn{
+	font-size: 16px;
 }
 
 .btn:hover,
@@ -138,3 +148,46 @@ input[type="submit"].btn--border:hover{
 .h-text-justify{text-align: justify !important;}
 .h-text-uppercase{text-transform: uppercase !important;}
 .h-text-bold {font-weight: 700 !important;}
+
+.contents-site{
+	margin: 50px 0;
+
+	&__item{
+		margin-bottom: 15px;
+	}
+}
+
+video{
+	max-width: 100%;
+}
+
+.site-video{
+	width: 585px;
+	max-width: 100%;
+}
+
+.bg-grey{
+	background: #f7f7f7;
+}
+
+.link-more{
+	@include font(normal, normal, 19px, 1.25, $color-brown);
+	border-bottom: 0;
+	padding-left: 60px;
+	position: relative;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		width: 30px;
+		height: 1px;
+		background: $color-brown;
+		position: absolute;
+		@include top-center;
+		left: 0;
+	}
+
+	&:hover::before{
+		display: none;
+	}
+}

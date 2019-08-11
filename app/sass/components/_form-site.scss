@@ -1,0 +1,83 @@
+/*-------------- form-site -----------------*/
+.form-site-wrap{
+	&.bg-grey{
+		padding: 50px 0 60px;
+	}
+
+	&.bg-grey .form-site{
+		margin-bottom: 0;
+	}
+
+	&.bg-grey .form-site .container{
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.form-site{
+	margin-bottom: 85px;
+
+	.container{
+		padding-bottom: 95px;
+		border-bottom: 1px solid #dadada;
+	}
+	
+	&__head{
+		@include font(normal, 700, 32px, 1.2, $color-text);
+		letter-spacing: 0.5px;
+	}
+
+	&__text{
+		@include font(normal, normal, 19px, 1.25, $color-text);
+		letter-spacing: 0.3px;
+		margin-top: 20px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		height: 50px;
+		width: 100%;
+		outline: none;
+		border: 0;
+		border-bottom: 1px solid #dadada;
+		@include font(normal, normal, 16px, 48px, $color-text);
+		padding: 0 10px 0 30px;
+		margin: 0;
+		margin-right: 50px;
+	}
+
+	textarea{
+		height: 100px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder{
+		color: $color-grey;
+	}
+
+	input[data-icon="person"]{
+		background: url(#{$path-icons}/ic-person.svg) no-repeat 0 center;
+	}
+
+	input[data-icon="phone"]{
+		background: url(#{$path-icons}/ic-call.svg) no-repeat 0 center;
+	}
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		flex: 1;
+	}
+
+	.btn{
+		min-width: 250px;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	textarea:focus{
+		border-color: $color-brown;
+	}
+}

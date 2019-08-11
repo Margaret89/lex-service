@@ -1,0 +1,31 @@
+/*-------------- advant -----------------*/
+.advant-wrap{
+	margin-top: 55px;
+	margin-bottom: 32px;
+}
+
+.advant{
+	margin-top: 22px;
+
+	&__item{
+		max-width: 250px;
+		text-align: center;
+		margin: 0 auto 65px;
+	}
+
+	&__icon{
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 80px;
+		height: 80px;
+		background: $color-text;
+		border-radius: 50%;
+	}
+
+	&__text{
+		@include font(normal, 700, 19px, 1.2, $color-text);
+		margin-top: 25px;
+	}
+}

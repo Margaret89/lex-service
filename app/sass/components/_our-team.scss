@@ -1,0 +1,196 @@
+/*-------------- our-team -----------------*/
+.our-team-wrap{
+	padding: 100px 0;
+	margin-bottom: 75px;
+}
+
+.our-team{
+	display: flex;
+	justify-content: space-between;
+
+	&__info{
+		width: 300px;
+		padding-bottom: 135px;
+		padding-top: 45px;
+	}
+
+	&__head{
+		@include font(normal, 700, 47px, 1, $color-text);
+		letter-spacing: 0.3px;
+	}
+
+	&__text{
+		@include font(normal, normal, 19px, 1.5, $color-text);
+		margin-top: 30px;
+	}
+}
+
+.team-slider{
+	position: relative;
+	width: calc(100% - 300px);
+	
+	.slick-list{
+		padding: 30px 0 30px 30px;
+	}
+
+	&__item{
+		background: #fff;
+		border-right: 1px solid #e4e4e4;
+		padding: 30px;
+		text-align: center;
+	}
+
+	&__item:hover{
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+		position: relative;
+		z-index: 2;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__name{
+		@include font(normal, 700, 19px, 1.2, $color-text);
+		margin-top: 14px;
+	}
+
+	&__text{
+		@include font(normal, normal, 17px, 1.5, $color-grey);
+		text-align: left;
+		margin-top: 13px;
+	}
+
+	.social{
+		margin-top: 22px;
+		justify-content: center;
+	}
+
+	.slick-arrow{
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		border: 2px solid #dadada;
+		outline: 0;
+		box-shadow: none;
+		font-size: 0;
+		position: absolute;
+		bottom: 60px;
+		cursor: pointer;
+		background: transparent;
+		padding: 0;
+	}
+
+	.slick-arrow::after{
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 16px;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.slick-next{left: -263px;}
+	.slick-prev{left: -330px;}
+
+	.slick-next::after{background: url(#{$path-icons}/ic-arr-next.svg) no-repeat center;}
+	.slick-prev::after{background: url(#{$path-icons}/ic-arr-prev.svg) no-repeat center;}
+
+	.slick-next:hover::after{background-image: url(#{$path-icons}/ic-arr-next-brown.svg);}
+	.slick-prev:hover::after{background-image: url(#{$path-icons}/ic-arr-prev-brown.svg);}
+
+	.slick-next.slick-disabled:hover::after,
+	.slick-next.slick-disabled::after{
+		background: url(#{$path-icons}/ic-arr-next-grey.svg) no-repeat center;
+	}
+
+	.slick-prev.slick-disabled:hover::after,
+	.slick-prev.slick-disabled::after{
+		background: url(#{$path-icons}/ic-arr-prev-grey.svg) no-repeat center;
+
+	}
+
+	.slick-prev-line,
+	.slick-next-line{
+		display: inline-block;
+		border-radius: 50%;
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		position: absolute;
+		top: -2px;
+		left: -2px;
+	}
+
+	.slick-prev-line{
+		background-image: linear-gradient(30deg, transparent 35%, transparent 35%),
+					linear-gradient(-110deg, transparent 35%, $color-brown 35%);
+	}
+
+	.slick-next-line{
+		background-image: linear-gradient(-30deg, transparent 35%, transparent 35%),
+					linear-gradient(110deg, transparent 35%, $color-brown 35%);
+
+
+	}
+
+	.slick-prev-line::before,
+	.slick-next-line::before{
+		content: '';
+		display: block;
+		width: calc(100% - 4px);
+		height: calc(100% - 4px);
+		border-radius: 50%;
+		background: #f7f7f7;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+	}
+
+	.slick-prev-line::after,
+	.slick-next-line::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 2px solid $color-brown;
+		transition: all 0.5s ease;
+	}
+
+	.slick-prev-line::after{
+		border-right-color: transparent;
+		border-top-color: transparent;
+	}
+
+	.slick-next-line::after{
+		border-left-color: transparent;
+		border-top-color: transparent;
+	}
+
+	.slick-next:hover .slick-next-line::after{transform: rotate(135deg); border-color: $color-brown-light;}
+	.slick-prev:hover .slick-prev-line::after{transform: rotate(-135deg); border-color: $color-brown-light;}
+
+	.slick-next.slick-disabled .slick-next-line,
+	.slick-prev.slick-disabled .slick-prev-line{
+		display: none;
+	}
+
+	.slick-prev.slick-disabled,
+	.slick-next.slick-disabled{
+		cursor: auto;
+	}
+}

@@ -1,0 +1,129 @@
+/*-------------- tabs-page -----------------*/
+.tabs-page{
+	margin-bottom: 85px;
+
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 70px;
+	}
+
+	&__item{
+		display: inline-block;
+		@include font(normal, 700, 17px, 1.2, $color-grey);
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		cursor: pointer;
+		margin-bottom: 20px;
+		position: relative;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 58px;
+	}
+
+	&__item:hover{
+		color: $color-text;
+	}
+
+	&__item.active::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: $color-brown;
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__item.active{
+		color: $color-text;
+	}
+
+	&__content-item{
+		display: none;
+	}
+}
+
+.tabs-page-vert{
+	display: flex;
+
+	&__list-wrap,
+	&__list{
+		width: 300px;
+	}
+
+	&__list{
+		padding-right: 30px;
+	}
+
+	&__list-wrap{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__content{
+		width: calc(100% - 300px);
+	}
+
+	&__list,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item{
+		display: block;
+		@include font(normal, 700, 19px, 1.2, $color-grey);
+		letter-spacing: 0.3px;
+		padding-left: 20px;
+		margin-bottom: 25px;
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		background: #dadada;
+		position: absolute;
+		left: 0;
+		top: 8px;
+	}
+
+	&__item:hover,
+	&__item.active{
+		color: $color-text;
+	}
+
+	&__item.active::before{
+		background: $color-brown;
+	}
+
+	&__content-item{
+		display: none;
+	}
+
+	.link-more{
+		margin-bottom: 10px;
+	}
+}
+
+h1 + .tabs-page,
+.h1 + .tabs-page{
+	margin-top: 55px;
+}

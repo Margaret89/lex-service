@@ -1,0 +1,71 @@
+/*-------------- services -----------------*/
+.services{
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		display: inline-block;
+		width: 25%;
+		border: 1px solid #e4e4e4;
+		margin: -1px 0 0 -1px;
+		padding: 42px 20px 32px;
+		text-align: center;
+		position: relative;
+	}
+
+	&__icons{
+		margin-bottom: 21px;
+		position: relative;
+		z-index: 3;
+	}
+
+	&__icon-white,
+	&__icon-color{
+		max-height: 60px;
+	}
+
+	&__icon-white{
+		display: none;
+	}
+
+	&__name{
+		max-width: 130px;
+		margin: 0 auto;
+		@include font(normal, 700, 19px, 1.25, $color-text);
+		position: relative;
+		z-index: 3;
+	}
+
+	&__img{
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		z-index: 2;
+		transition: width 0.3s ease 0s, height 0.3s ease 0s;
+	}
+
+	&__item:hover &__img{
+		opacity: 1;
+		width: 110%;
+		height: 110%;
+	}
+
+	&__item:hover &__name{
+		color: #fff;
+	}
+
+	&__item:hover &__icon-white{
+		display: inline-block;
+	}
+
+	&__item:hover &__icon-color{
+		display: none;
+	}
+}

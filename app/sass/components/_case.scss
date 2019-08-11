@@ -1,0 +1,29 @@
+/*-------------- case -----------------*/
+.case{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__img{
+		width: 290px;
+		position: relative;
+	}
+
+	&__text{
+		width: calc(100% - 360px);
+	}
+
+	&__author{
+		display: block;
+		width: 100%;
+		@include font(normal, 700, 19px, 1.2, #fff);
+		padding: 25px 32px;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+		letter-spacing: 0.2px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
