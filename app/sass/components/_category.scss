@@ -1,0 +1,30 @@
+/*-------------- category -----------------*/
+.category{
+	margin-bottom: 15px;
+	
+	&__item{
+		display: flex;
+		align-items: center;
+		margin-bottom: 70px;
+	}
+
+	&__icon{
+		width: 60px;
+		margin-right: 30px;
+	}
+
+	&__name{
+		width: calc(100% - 90px);
+		max-width: 195px;
+	}
+
+	&__name,
+	&__name a{
+		@include font(normal, 700, 19px, 1.25, $color-text);
+		border-bottom: 0;
+	}
+
+	&__name a:hover{
+		color: $color-brown-light;
+	}
+}
