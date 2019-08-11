@@ -71,13 +71,14 @@
 	.btn{width: 140px;}
 
 	&__price{
-		width: 270px;
+		width: calc(100% - 650px);
 		@include font(normal, 700, 19px, 1.25, $color-text);
-		padding-left: 95px;
+		text-align: center;
+		padding: 0 30px;
 	}
 
 	&__text{
-		width: calc(100% - 500px);
+		width: 420px;
 		@include font(normal, normal, 19px, 1.25, $color-text);
 		letter-spacing: 0.3px;
 	}
@@ -122,55 +123,5 @@
 		@include font(normal, 700, 38px, 1.25, $color-text);
 		width: 230px;
 		padding-right: 30px;
-	}
-}
-
-.service-page-info{
-	background: #f7f7f7;
-	padding-bottom: 15px;
-	margin-top: 20px;
-
-	&__item{
-		padding: 20px 30px 18px;
-	}
-
-	&__item:not(:last-child){
-		border-bottom: 1px solid #e4e4e4;
-	}
-
-	&__head{
-		@include font(normal, 700, 19px, 1.25, $color-text);
-		margin-bottom: 13px;
-	}
-
-	&__text,
-	&__text p{
-		@include font(normal, normal, 17px, 1.5, $color-text);
-	}
-
-	&__text p{
-		padding: 0;
-		margin-bottom: 10px;
-	}
-
-	&__text p:last-child{
-		margin-bottom: 0;
-	}
-
-	&__old-price{
-		@include font(normal, 700, 22px, 1.25, $color-grey);
-		text-decoration: line-through;
-		margin-top: 3px;
-		margin-bottom: 12px;
-	}
-
-	&__price{
-		@include font(normal, 700, 38px, 1, $color-text);
-	}
-
-	.btn{
-		margin-top: 25px;
-		width: 100%;
-		min-width: 100px;
 	}
 }

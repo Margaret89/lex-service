@@ -120,6 +120,20 @@
 	}
 }
 
+.form-site-radio{
+	margin-bottom: 32px;
+	
+	&__label{
+		@include font(normal, 700, 38px, 1.2, $color-text);
+		letter-spacing: 0.3px;
+		margin-bottom: 40px;
+	}
+
+	&__item{
+		margin-bottom: 20px;
+	}
+}
+
 .popup-form{
 	width: 360px;
 }

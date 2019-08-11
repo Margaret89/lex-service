@@ -243,3 +243,66 @@ video{
 .fancybox-content{
 	padding: 30px 40px 40px;
 }
+
+.input-radio{
+	&__label{
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+		@include font(normal, normal, 19px, 1.25, $color-text);
+	}
+
+	input[type=radio] {
+		display: none;
+	}
+
+	&__mark{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		border: 1px solid $color-grey;
+		background: transparent;
+	}
+
+	&__text{
+		max-width: calc(100% - 32px);
+		margin-left: 15px;
+	}
+
+	&--img &__text{
+		max-width: calc(100% - 140px);
+	}
+
+	&__label:hover &__mark,
+	input[type=radio]:checked + &__label &__mark{
+		border: 3px solid $color-brown;
+	}
+
+	&__img{
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 80px;
+		height: 80px;
+		background: $color-text;
+		border-radius: 50%;
+		margin: 0 4px 0 23px;
+	}
+
+	&__img-active{
+		display: none;
+	}
+
+	&__label:hover &__img-inactive,
+	input[type=radio]:checked &__img-inactive{
+		display: none;
+	}
+
+	&__label:hover &__img-active,
+	input[type=radio]:checked &__img-active{
+		display: block;
+	}
+}
