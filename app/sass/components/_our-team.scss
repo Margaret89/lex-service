@@ -28,10 +28,10 @@
 .team-slider{
 	display: none;
 	position: relative;
-	width: calc(100% - 300px);
+	width: calc(100% - 330px);
 	
 	.slick-list{
-		padding: 30px 0 30px 30px;
+		padding: 30px 0;
 	}
 
 	&.slick-initialized{
@@ -106,8 +106,8 @@
 		margin: 0 auto;
 	}
 
-	.slick-next{left: -233px;}
-	.slick-prev{left: -300px;}
+	.slick-next{left: -263px;}
+	.slick-prev{left: -330px;}
 
 	.slick-next::after{background: url(#{$path-icons}/ic-arr-next.svg) no-repeat center;}
 	.slick-prev::after{background: url(#{$path-icons}/ic-arr-prev.svg) no-repeat center;}
@@ -197,5 +197,33 @@
 	.slick-prev.slick-disabled,
 	.slick-next.slick-disabled{
 		cursor: auto;
+	}
+}
+
+@media (max-width: 991px) {
+	.our-team{
+		display: block;
+
+		&__info{
+			width: 100%;
+			padding-bottom: 45px;
+			padding-top: 0;
+		}
+	}
+
+	.team-slider{
+		width: 100%;
+
+		.slick-prev,
+		.slick-next{
+			left: auto;
+			right: 0;
+			bottom: auto;
+			top: -35px;
+		}
+
+		.slick-prev{
+			right: 65px;
+		}
 	}
 }

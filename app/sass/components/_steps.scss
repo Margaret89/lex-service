@@ -124,3 +124,19 @@
 		animation-fill-mode: forwards
 	}
 }
+
+@media (max-width: 767px) {
+	.steps{
+		flex-wrap: wrap;
+
+		&__item{
+			width: 50%;
+			margin-bottom: 20px;
+		}
+
+		&__text{
+			padding: 0 10px;
+			max-width: 100%;
+		}
+	}
+}

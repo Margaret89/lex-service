@@ -367,7 +367,28 @@ video{
 		font-size: 17px;
 	}
 
+	h1,
+	.h1{
+		font-size: 34px;
+		// margin-bottom: 40px;
+	}
+
+	h2,
+	.h2{
+		font-size: 30px;
+		// margin-bottom: 23px;
+	}
+
+	h3,
+	.h3{
+		font-size: 25px;
+	}
+
 	.wrapper{
 		overflow: hidden;
+	}
+
+	.fancybox-content{
+		padding: 30px 20px 20px;
 	}
 }

@@ -121,6 +121,7 @@
 	&--vert input[type="text"],
 	&--vert input[type="email"],
 	&--vert textarea{
+		width: 100%;
 		margin: 0;
 		margin-bottom: 20px;
 	}
@@ -171,5 +172,84 @@
 	&__text{
 		@include font(normal, normal, 19px, 1.25, $color-text);
 		text-align: center;
+	}
+}
+
+@media (max-width: 1349px) {
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			width: 180px;
+			margin-right: 30px;
+		}
+
+		&--vert input[type="text"],
+		&--vert input[type="email"],
+		&--vert textarea{
+			width: 100%;
+			margin: 0;
+			margin-bottom: 20px;
+		}
+
+		.btn,
+		input[type="submit"].btn{
+			min-width: 180px;
+			padding: 0 15px;
+		}
+
+		&--vert .btn,
+		&--vert input[type="submit"].btn{
+			min-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.form-site{
+		&__info{
+			margin-bottom: 20px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site{
+		margin-bottom: 45px;
+
+		&__head{
+			font-size: 28px;
+		}
+		
+		&__content{
+			display: block;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+
+		.btn,
+		input[type="submit"].btn{
+			width: auto;
+			padding: 0 20px;
+		}
+
+		.container{
+			padding-bottom: 50px;
+		}
+
+		&--vert{
+			margin-bottom: 0;
+		}
 	}
 }

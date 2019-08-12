@@ -87,3 +87,39 @@
 		cursor: auto;
 	}
 }
+
+@media (max-width: 767px) {
+	.top-slider{
+		height: 400px;
+		margin-bottom: 45px;
+
+		&__item{
+			height: 400px;
+		}
+
+		&__content{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&__head{
+			font-size: 34px;
+		}
+
+		&__text{
+			font-size: 18px;
+		}
+
+		.slick-dots{
+			bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.top-slider{
+		&__head{
+			font-size: 30px;
+		}
+	}
+}

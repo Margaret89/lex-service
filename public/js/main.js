@@ -6,7 +6,7 @@ $(document).ready(function () {
 			arrows: false,
 			dots: true,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
 		});
 	}
 
@@ -19,7 +19,21 @@ $(document).ready(function () {
 			slidesToScroll: 1,
 			infinite: false,
 			prevArrow : '<button type="button" class="slick-prev"><span class="slick-prev-line"></span></button>',
-			nextArrow : '<button type="button" class="slick-next"><span class="slick-next-line"></span></button>'
+			nextArrow : '<button type="button" class="slick-next"><span class="slick-next-line"></span></button>',
+			responsive: [
+				{
+					breakpoint: 1350,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+					}
+				},
+			]
 		});
 	}
 		
@@ -146,6 +160,54 @@ $(document).ready(function () {
 			$(this).parent().children(".js-unwrap-content").slideUp(400);
 		}
 	});
+
+	// Выравнивание блока новостей
+	var windowWidth = $(window).width();
+
+	resizeNews();
+
+	$(window).resize(function(){
+		windowWidth = $(window).width();
+		resizeNews();
+	});
+
+	function resizeNews() {
+		if (windowWidth > 767) {
+			var countItem = 0;
+			var heightTop = 0;
+			var countNews = $('.js-news-item').length;
+
+			$('.js-news-item').each(function(index){
+				var $newsTop = $(this).find('.js-news-top');
+				var heightTopTemp = $newsTop.outerHeight();
+
+				if (windowWidth > 991) {
+					var countColumn = 3;
+				}else{
+					var countColumn = 2;
+				}
+
+				countItem++;
+				$newsTop.addClass('js-resize-top');
+
+
+				if (heightTop < heightTopTemp) {
+					heightTop = heightTopTemp;
+				}
+
+				if ((countItem == countColumn) || (index == countNews-1)) {
+					console.log(heightTop);
+					$('.js-resize-top').css('height', heightTop);
+					$('.js-resize-top').removeClass('js-resize-top');
+					countItem = 0;
+					heightTop = 0;
+				}
+
+			});
+		}
+	}
+	
+	
 
 	// Маска для телефона
 	$.mask.definitions['~'] = "[+-]";

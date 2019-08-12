@@ -11,3 +11,9 @@
 .map .ymaps-2-1-74-ground-pane{
 	filter: grayscale(100%);
 }
+
+@media (max-width: 767px) {
+	.map{
+		height: 300px;
+	}
+}

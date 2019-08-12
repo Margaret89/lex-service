@@ -42,3 +42,28 @@
 		margin-top: 35px;
 	}
 }
+
+@media (max-width: 991px) {
+	.head-block{
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.head-block{
+		&__title,
+		&__subtitle{
+			font-size: 40px;
+			letter-spacing: 0.5px;
+		}
+
+		&__content{
+			padding-left: 50px;
+		}
+
+		&__content::before,
+		&__content::after{
+			top: 25px;
+		}
+	}
+}

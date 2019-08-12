@@ -27,3 +27,22 @@
 		margin: 0 auto;
 	}
 }
+
+@media (max-width: 1349px) {
+	.case{
+		&__text{
+			width: calc(100% - 320px);
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.case{
+		display: block;
+
+		&__text{
+			width: 100%;
+			margin-top: 30px;
+		}
+	}
+}
