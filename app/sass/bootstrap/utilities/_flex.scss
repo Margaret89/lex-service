@@ -44,5 +44,16 @@
     .align-self#{$infix}-center   { align-self: center !important; }
     .align-self#{$infix}-baseline { align-self: baseline !important; }
     .align-self#{$infix}-stretch  { align-self: stretch !important; }
+
+    .order#{$infix}-0    { order: 0; }
+    .order#{$infix}-1    { order: 1; }
+    .order#{$infix}-2    { order: 2; }
+    .order#{$infix}-3    { order: 3; }
+    .order#{$infix}-4    { order: 4; }
+    .order#{$infix}-5    { order: 5; }
+    .order#{$infix}-6    { order: 6; }
+    .order#{$infix}-7    { order: 7; }
+    .order#{$infix}-8    { order: 8; }
+    .order#{$infix}-9    { order: 9; }
   }
 }

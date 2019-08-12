@@ -175,28 +175,112 @@ $(document).ready(function () {
 		}
 	}
 
-	// // Вызов функции подгрузки изображений
-	// loadBigImg();
-	// loadBigBacground();
+	// Открыть/Закрыть поиск на телефоне
+	$('.js-ic-search').click(function(e) {
+		e.preventDefault();
+		$('.js-search-form').slideToggle(200);
+	});
 
+	$(document).click(function(event) {
+		if ($(event.target).closest(".js-search-form").length) return;
+		if ($(event.target).closest(".js-ic-search").length) return;
+		$('.js-search-form').slideUp(200);
+	});
+
+	// Добавление пункта "Еще" в меню
+	var windowWidth = $(window).width();
+	var arrWidthMenu = [];
+	var moreMenu = false;
+
+	$('.js-menu-menu-item').each(function(index){
+		var itemWidth = $(this).outerWidth();
+		arrWidthMenu.push($(this).outerWidth());
+	});
+
+	addItemMenu();
+
+	$('.js-menu-menu').addClass('is-visible');
+
+	$(window).resize(function(){
+		windowWidth = $(window).width();
+		addItemMenu();
+	});
+
+	function addItemMenu() {
+		if (windowWidth >767) {
+			var moreItemMenu = 100;
+			var menuWidth = $('.js-menu-menu').width() - moreItemMenu;
+			var sumItemMenu = 0;
+
+			for (var i = 0; i < arrWidthMenu.length; i++) {
+				var $curItem = $('.js-menu-menu-item[data-item='+ i +']');
+				sumItemMenu = sumItemMenu + arrWidthMenu[i];
+
+				// Добавляем пункт Еще и его подпункты
+				if(sumItemMenu > menuWidth){
+					$curItem.addClass('no-active');
+
+					if (moreMenu == false) {
+						$('.js-menu-menu').append('<li class="main-menu__item js-menu-more">Еще<ul class="main-menu__more js-menu-more-sub"></ul></li>');
+						moreMenu = true;
+					}
+
+					if (!$('.main-menu__more-item[data-item='+i+']').length) {
+						$('.main-menu__more-item').attr('data-item')
+						var $clone = $curItem.clone().appendTo(".js-menu-more-sub");
+						$clone.removeClass('main-menu__item js-menu-menu-item no-active');
+						$clone.addClass('main-menu__more-item js-menu-more-item');
+					}
+				}else{
+					$curItem.removeClass('no-active');
+					$('.main-menu__more-item[data-item='+i+']').remove();
+				}
+			}
+
+			// Удаляем пункт Еще, если все пункты вмещаются
+			if ($('.js-menu-more-item').length == 0) {
+				$('.js-menu-more').remove();
+				moreMenu = false;
+			}
+		}else{
+			if ($('.js-menu-more').length) {
+				$('.js-menu-menu-item').removeClass('no-active');
+				$('.js-menu-more').remove();
+				moreMenu = false;
+			}
+		}
+	}
+
+	// Создание мобильного меню
+	var arrMobileMenu = [];
+	$('.js-add-mm').each(function(){
+		var indexItem = $(this).attr('data-order');
+		arrMobileMenu[indexItem] = $(this);
+	});
+
+	for (var i = 0; i < arrMobileMenu.length; i++) {
+		$(arrMobileMenu[i]).clone().appendTo('.js-mobile-menu-content');
+	}
 	
+	// Открыть/Закрыть мобильное меню
+	$('.js-open-menu').click(function(){
+		$('.js-shadow').addClass('is-visible');
+		$('.js-mobile-menu').addClass('open');
+		$('.js-body').addClass('no-scroll');
+	});
+
+	$('.js-close-menu').click(function(){
+		 closeCatMenu();
+	});
+
+	$('.js-shadow').click(function(){
+		closeCatMenu();
+	});
+
+	function closeCatMenu() {
+		$('.js-shadow').removeClass('is-visible');
+		$('.js-mobile-menu').removeClass('open');
+		$('.js-body').removeClass('no-scroll');
+	}
+
 });
-
-// // Загрузка больших изображений
-// function loadBigImg() {
-// 	var $imgDefer = $('[data-src]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlImgBig = $(this).attr("data-src");
-// 		$(this).attr("src", urlImgBig);
-// 	});
-// }
-
-// function loadBigBacground() {
-// 	var $imgDefer = $('[data-background]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlBackgroundBig = $(this).attr("data-background");
-// 		$(this).css("background-image", "url("+ urlBackgroundBig +")");
-// 	});
-// }

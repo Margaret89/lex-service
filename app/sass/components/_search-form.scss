@@ -42,3 +42,9 @@
 		background-image: url(#{$path-icons}/ic-search-hover.svg);
 	}
 }
+
+@media (max-width: 1349px) {
+	.search-form{
+		width: 200px;
+	}
+}

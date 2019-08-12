@@ -79,3 +79,49 @@
 		color: $color-grey;
 	}
 }
+
+@media (max-width: 767px) {
+	.footer{
+		&__item,
+		&__item a{
+			font-size: 17px;
+		}
+
+		&__copyright{
+			position: relative;
+			padding-top: 20px;
+		}
+
+		&__copyright::before {
+			content: '';
+			display: block;
+			height: 1px;
+			background: #e4e4e4;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 -15px;
+		}
+
+		&__info{
+			max-width: 100%;
+		}
+	}
+
+	.footer-contacts-wrap{
+		padding-top: 20px;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 1px;
+			background: #e4e4e4;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 -15px;
+		}
+	}
+}
