@@ -370,18 +370,25 @@ video{
 	h1,
 	.h1{
 		font-size: 34px;
-		// margin-bottom: 40px;
+		margin-top: 20px;
 	}
 
 	h2,
 	.h2{
 		font-size: 30px;
-		// margin-bottom: 23px;
 	}
 
 	h3,
 	.h3{
 		font-size: 25px;
+	}
+
+	ul, ul li{
+		font-size: 17px;
+	}
+
+	ul li::after{
+		top: 10px;
 	}
 
 	.wrapper{

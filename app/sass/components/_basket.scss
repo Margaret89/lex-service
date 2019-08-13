@@ -12,6 +12,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__head h1,
+	&__head .h1{
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 }
 
@@ -51,5 +58,53 @@
 		width: 420px;
 		@include font(normal, normal, 19px, 1.25, $color-text);
 		letter-spacing: 0.3px;
+	}
+}
+
+@media (max-width: 1349px) {
+	.basket-list{
+		&__text{
+			width: 220px;
+		}
+
+		&__price{
+			width: calc(100% - 326px);
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.basket{
+		&__head{
+			margin-top: 30px;
+		}
+	}
+	
+	.basket-list{
+		margin-top: 30px;
+
+		&__item{
+			flex-wrap: wrap;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		&__text{
+			width: calc(100% - 90px);
+			font-size: 17px;
+		}
+
+		&__price{
+			width: calc(100% - 12px);
+			padding: 0 20px 0 90px;
+			text-align: left;
+			margin-top: 10px;
+		}
+
+		&__close{
+			margin-top: 10px;
+		}
 	}
 }

@@ -60,3 +60,11 @@
 		margin-bottom: 9px;
 	}
 }
+
+@media (max-width: 767px) {
+	.sidebar-info{
+		&__item{
+			padding: 20px;
+		}
+	}
+}

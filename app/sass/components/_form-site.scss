@@ -251,5 +251,19 @@
 		&--vert{
 			margin-bottom: 0;
 		}
+
+		&--vert &__head{
+			font-size: 24px;
+		}
+
+		&--vert &__text{
+			font-size: 17px;
+		}
+	}
+
+	.form-site-radio{
+		&__label{
+			font-size: 32px;
+		}
 	}
 }

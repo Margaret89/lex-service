@@ -196,7 +196,6 @@ $(document).ready(function () {
 				}
 
 				if ((countItem == countColumn) || (index == countNews-1)) {
-					console.log(heightTop);
 					$('.js-resize-top').css('height', heightTop);
 					$('.js-resize-top').removeClass('js-resize-top');
 					countItem = 0;
@@ -206,8 +205,6 @@ $(document).ready(function () {
 			});
 		}
 	}
-	
-	
 
 	// Маска для телефона
 	$.mask.definitions['~'] = "[+-]";

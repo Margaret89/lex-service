@@ -28,3 +28,19 @@
 		color: $color-brown-light;
 	}
 }
+
+@media (max-width: 767px) {
+	.category{
+		&__item{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.category{
+		&__name{
+			max-width: 100%;
+		}
+	}
+}

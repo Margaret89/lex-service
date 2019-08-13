@@ -29,3 +29,22 @@
 		margin-bottom: 16px;
 	}
 }
+
+@media (max-width: 767px) {
+	.contacts{
+		padding-bottom: 50px;
+		margin-bottom: 45px;
+
+		.sidebar-info__item{
+			padding: 20px;
+		}
+
+		.sidebar-info__head{
+			font-size: 27px;
+		}
+	}
+
+	.company-details{
+		font-size: 17px;
+	}
+}
