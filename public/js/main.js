@@ -234,18 +234,6 @@ $(document).ready(function () {
 		}
 	}
 
-	// Открыть/Закрыть поиск на телефоне
-	$('.js-ic-search').click(function(e) {
-		e.preventDefault();
-		$('.js-search-form').slideToggle(200);
-	});
-
-	$(document).click(function(event) {
-		if ($(event.target).closest(".js-search-form").length) return;
-		if ($(event.target).closest(".js-ic-search").length) return;
-		$('.js-search-form').slideUp(200);
-	});
-
 	// Добавление пункта "Еще" в меню
 	var windowWidth = $(window).width();
 	var arrWidthMenu = [];
@@ -342,4 +330,17 @@ $(document).ready(function () {
 		$('.js-body').removeClass('no-scroll');
 	}
 
+	// Открыть/Закрыть поиск на телефоне
+	$('.js-ic-search').click(function(e) {
+		e.preventDefault();
+		$('.js-search-form').slideToggle(200);
+	});
+
+	$(document).click(function(event) {
+		if (windowWidth < 768) {
+			if ($(event.target).closest(".js-search-form").length) return;
+			if ($(event.target).closest(".js-ic-search").length) return;
+			$('.js-search-form').slideUp(200);
+		}
+	});
 });

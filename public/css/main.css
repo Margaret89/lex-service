@@ -668,6 +668,12 @@ input[type=radio]:checked .input-radio__img-active {
   }
 }
 
+@media (min-width: 768px) {
+  .header-bottom .search-form {
+    display: inline-block !important;
+  }
+}
+
 @media (max-width: 767px) {
   .header {
     position: relative;
